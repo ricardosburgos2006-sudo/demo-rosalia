@@ -1,0 +1,593 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dra. Rosalía Cikacz Navarro | Clínica Dental en Illescas</title>
+    <meta name="description" content="Clínica Dental de la Dra. Rosalía Cikacz Navarro en Calle Real 49, Illescas. Odontología cercana, implantes, estética dental, ortodoncia y urgencias.">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Google Fonts: Estilo Editorial Boutique -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,600;0,700;1,600&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Plus Jakarta Sans', 'sans-serif'],
+                        serif: ['Cormorant Garamond', 'serif'],
+                    },
+                    colors: {
+                        boutique: {
+                            ivory: '#FAF8F5',     // Fondo cálido marfil
+                            sand: '#F1EDE4',      // Arena suave para secciones
+                            sage: '#1F4E46',      // Verde salvia profundo (salud y calma)
+                            sagedark: '#14352F',  // Verde oscuro
+                            gold: '#B88E2F',      // Dorado bronce elegante
+                            ink: '#1C242B'        // Gris carbón para lectura limpia
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .bento-card {
+            transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+        .bento-card:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 22px 35px -12px rgba(31, 78, 70, 0.14);
+        }
+        .chip-active {
+            background-color: #1F4E46 !important;
+            color: #ffffff !important;
+            border-color: #1F4E46 !important;
+        }
+    </style>
+</head>
+<body class="bg-boutique-ivory text-boutique-ink antialiased selection:bg-boutique-sage selection:text-white">
+
+    <!-- Barra Superior Minimalista -->
+    <div class="bg-boutique-sage text-stone-100 text-xs py-2.5 px-4 sm:px-8">
+        <div class="max-w-7xl mx-auto flex flex-col sm:flex-row justify-between items-center gap-2">
+            <div class="flex items-center space-x-5">
+                <span><i class="fa-solid fa-location-dot text-amber-300 mr-1.5"></i>Calle Real, 49 — 45200 Illescas (Toledo)</span>
+                <span class="hidden md:inline text-stone-400">•</span>
+                <span class="hidden md:inline"><i class="fa-regular fa-clock text-amber-300 mr-1.5"></i>Lunes a Viernes hasta las 20:30h</span>
+            </div>
+            <div class="flex items-center space-x-5">
+                <span class="text-amber-300 font-medium"><i class="fa-solid fa-star mr-1"></i>Trato familiar y odontología de confianza en Illescas</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Navegación Editorial -->
+    <nav class="bg-boutique-ivory/90 backdrop-blur-md sticky top-0 z-50 border-b border-stone-200/80">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-22 py-4">
+                <!-- Marca de Autor -->
+                <a href="#" class="flex items-center space-x-3.5">
+                    <div class="w-11 h-11 rounded-full bg-boutique-sage text-white flex items-center justify-center font-serif text-2xl font-bold shadow-sm border border-boutique-gold/40">
+                        R
+                    </div>
+                    <div>
+                        <span class="font-serif text-2xl sm:text-3xl font-bold text-boutique-sage block leading-none tracking-tight">Dra. Rosalía Cikacz Navarro</span>
+                        <span class="text-[11px] uppercase tracking-[0.2em] text-stone-500 font-semibold block mt-1">Clínica Dental en Illescas</span>
+                    </div>
+                </a>
+
+                <!-- Enlaces Centrales -->
+                <div class="hidden lg:flex items-center space-x-8 text-sm font-medium text-stone-600">
+                    <a href="#filosofia" class="hover:text-boutique-sage transition">Nuestra Clínica</a>
+                    <a href="#tratamientos" class="hover:text-boutique-sage transition">Tratamientos</a>
+                    <a href="#opiniones" class="hover:text-boutique-sage transition">Pacientes</a>
+                    <a href="#ubicacion" class="hover:text-boutique-sage transition">Calle Real 49</a>
+                </div>
+
+                <!-- Contacto Directo -->
+                <div class="flex items-center space-x-3">
+                    <a href="tel:925540433" class="hidden sm:flex items-center text-boutique-ink hover:text-boutique-sage font-semibold text-sm px-3 py-2 transition">
+                        <i class="fa-solid fa-phone text-boutique-gold mr-2"></i>925 54 04 33
+                    </a>
+                    <a href="#cita-directa" class="bg-boutique-sage hover:bg-boutique-sagedark text-white px-5 py-2.5 rounded-full font-semibold text-sm transition shadow-sm flex items-center space-x-2">
+                        <i class="fa-brands fa-whatsapp text-base text-emerald-300"></i>
+                        <span>Pedir Cita</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- HERO SECTION: Diseño Editorial Asimétrico (Cero parecido a Loranca) -->
+    <header class="py-12 lg:py-20 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
+        <div class="grid lg:grid-cols-12 gap-12 items-center">
+            
+            <!-- Columna Izquierda: Mensaje de Cercanía y Autoridad -->
+            <div class="lg:col-span-7 space-y-6">
+                <div class="inline-flex items-center space-x-2 bg-boutique-sand border border-stone-300/70 text-boutique-sage px-4 py-1.5 rounded-full text-xs font-semibold">
+                    <i class="fa-solid fa-heart text-boutique-gold"></i>
+                    <span>Odontología honesta, cercana y sin prisas en el corazón de Illescas</span>
+                </div>
+
+                <h1 class="font-serif text-4xl sm:text-6xl font-bold text-boutique-ink leading-[1.12]">
+                    Cuidamos de tu sonrisa con la cercanía de <span class="italic text-boutique-sage font-normal">toda la vida.</span>
+                </h1>
+
+                <p class="text-stone-600 text-base sm:text-lg leading-relaxed max-w-2xl">
+                    En la clínica de la <strong>Dra. Rosalía Cikacz Navarro</strong> creemos en una odontología donde siempre te atiende el mismo profesional de confianza. Explicaciones claras, presupuestos transparentes y tratamientos pensados para tu tranquilidad y la de tu familia.
+                </p>
+
+                <!-- Botones de Acción -->
+                <div class="pt-2 flex flex-col sm:flex-row gap-4">
+                    <a href="#cita-directa" class="bg-boutique-sage hover:bg-boutique-sagedark text-white px-8 py-4 rounded-full font-semibold text-sm sm:text-base text-center transition shadow-md flex items-center justify-center space-x-2.5">
+                        <i class="fa-brands fa-whatsapp text-xl text-emerald-300"></i>
+                        <span>Reservar Cita por WhatsApp</span>
+                    </a>
+                    <a href="tel:925540433" class="bg-white hover:bg-boutique-sand border border-stone-300 text-boutique-ink px-7 py-4 rounded-full font-semibold text-sm sm:text-base text-center transition flex items-center justify-center space-x-2">
+                        <i class="fa-solid fa-phone text-boutique-sage"></i>
+                        <span>Llamar al 925 54 04 33</span>
+                    </a>
+                </div>
+
+                <!-- Sellos de Confianza en Fila -->
+                <div class="pt-6 grid grid-cols-3 gap-4 border-t border-stone-200/90 text-left">
+                    <div class="flex items-start space-x-2.5">
+                        <i class="fa-solid fa-user-doctor text-boutique-gold text-lg mt-1"></i>
+                        <div>
+                            <p class="font-bold text-sm text-boutique-ink">Trato Directo</p>
+                            <p class="text-xs text-stone-500">Sin franquicias ni rotación</p>
+                        </div>
+                    </div>
+                    <div class="flex items-start space-x-2.5">
+                        <i class="fa-solid fa-location-dot text-boutique-gold text-lg mt-1"></i>
+                        <div>
+                            <p class="font-bold text-sm text-boutique-ink">Calle Real, 49</p>
+                            <p class="text-xs text-stone-500">En pleno centro de Illescas</p>
+                        </div>
+                    </div>
+                    <div class="flex items-start space-x-2.5">
+                        <i class="fa-solid fa-bolt text-boutique-gold text-lg mt-1"></i>
+                        <div>
+                            <p class="font-bold text-sm text-boutique-ink">Cita Ágil</p>
+                            <p class="text-xs text-stone-500">Contacto directo al móvil</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Columna Derecha: Composición Fotográfica Enmarcada -->
+            <div class="lg:col-span-5 relative">
+                <div class="relative rounded-[2rem] overflow-hidden shadow-2xl border-8 border-white bg-stone-200 aspect-[4/5]">
+                    <img src="https://images.unsplash.com/photo-1629909613654-28e377c37b09?ixlib=rb-4.0.3&auto=format&fit=crop&w=900&q=80" alt="Consulta Clínica Dental Dra. Rosalía Cikacz Navarro" class="w-full h-full object-cover">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent"></div>
+                    <div class="absolute bottom-6 left-6 right-6 text-white">
+                        <p class="font-serif italic text-2xl leading-snug">"Tu tranquilidad al sentarte en el sillón es nuestra mayor prioridad."</p>
+                        <p class="text-xs uppercase tracking-widest text-amber-300 font-semibold mt-2">Dra. Rosalía Cikacz Navarro</p>
+                    </div>
+                </div>
+
+                <!-- Tarjeta Flotante de Valoración -->
+                <div class="hidden sm:flex absolute -top-5 -left-6 bg-white p-4 rounded-2xl shadow-xl border border-stone-100 items-center space-x-3">
+                    <div class="w-11 h-11 rounded-xl bg-amber-50 text-amber-500 flex items-center justify-center text-xl font-bold">
+                        <i class="fa-solid fa-star"></i>
+                    </div>
+                    <div>
+                        <p class="text-xs text-stone-500 font-medium">Valoración en Google</p>
+                        <p class="font-bold text-sm text-boutique-ink">4,3 ★ Pacientes de Illescas</p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </header>
+
+    <!-- SECCIÓN DIFERENCIADORA: POR QUÉ ELEGIR UNA CLÍNICA DE AUTOR FRENTE A FRANQUICIAS -->
+    <section id="filosofia" class="py-16 bg-boutique-sand px-4 sm:px-6 lg:px-8 border-y border-stone-200/80">
+        <div class="max-w-7xl mx-auto">
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="bg-boutique-ivory p-7 rounded-2xl border border-stone-200/70">
+                    <span class="text-boutique-gold font-serif text-3xl font-bold">01.</span>
+                    <h3 class="font-serif text-2xl font-bold text-boutique-ink mt-2 mb-2">Siempre tu misma Doctora</h3>
+                    <p class="text-stone-600 text-sm leading-relaxed">
+                        A diferencia de las cadenas comerciales donde cada día te atiende un dentista distinto, aquí conocemos tu historial, tu caso y tu evolución de principio a fin.
+                    </p>
+                </div>
+                <div class="bg-boutique-ivory p-7 rounded-2xl border border-stone-200/70">
+                    <span class="text-boutique-gold font-serif text-3xl font-bold">02.</span>
+                    <h3 class="font-serif text-2xl font-bold text-boutique-ink mt-2 mb-2">Diagnóstico Honesto</h3>
+                    <p class="text-stone-600 text-sm leading-relaxed">
+                        Solo recomendamos los tratamientos que realmente necesitas para conservar tus piezas naturales, explicándote cada paso con claridad y sin tecnicismos.
+                    </p>
+                </div>
+                <div class="bg-boutique-ivory p-7 rounded-2xl border border-stone-200/70">
+                    <span class="text-boutique-gold font-serif text-3xl font-bold">03.</span>
+                    <h3 class="font-serif text-2xl font-bold text-boutique-ink mt-2 mb-2">Atención sin Esperas</h3>
+                    <p class="text-stone-600 text-sm leading-relaxed">
+                        Respetamos tu tiempo. Trabajamos con agenda programada y contacto directo por WhatsApp para resolver cualquier duda o urgencia dental en el día.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- TRATAMIENTOS DENTALES (Diseño Bento Grid Minimalista) -->
+    <section id="tratamientos" class="py-20 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
+        <div class="flex flex-col md:flex-row justify-between items-start md:items-end mb-14">
+            <div class="max-w-xl">
+                <span class="text-boutique-sage font-bold text-xs uppercase tracking-[0.2em]">Especialidades Odontológicas</span>
+                <h2 class="font-serif text-4xl sm:text-5xl font-bold text-boutique-ink mt-2">
+                    Tratamientos pensados para tu salud bucodental
+                </h2>
+            </div>
+            <p class="text-stone-500 text-sm mt-4 md:mt-0 max-w-sm">
+                Pulsa sobre cualquier tratamiento para seleccionarlo automáticamente en tu solicitud de cita.
+            </p>
+        </div>
+
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <!-- T1 -->
+            <div onclick="elegirMotivo('Revisión y Limpieza Dental')" class="cursor-pointer bg-white p-8 rounded-3xl border border-stone-200/80 bento-card flex flex-col justify-between">
+                <div>
+                    <div class="w-12 h-12 rounded-2xl bg-boutique-sand text-boutique-sage flex items-center justify-center text-xl mb-6">
+                        <i class="fa-solid fa-tooth"></i>
+                    </div>
+                    <h3 class="font-serif text-2xl font-bold text-boutique-ink mb-2">Odontología Conservadora e Higiene</h3>
+                    <p class="text-stone-600 text-sm leading-relaxed mb-6">
+                        Revisiones periódicas, limpiezas bucales profundas (tartrectomía), reconstrucciones, empastes y prevención de caries para adultos y niños.
+                    </p>
+                </div>
+                <span class="text-xs font-bold uppercase tracking-wider text-boutique-sage flex items-center">
+                    Solicitar revisión <i class="fa-solid fa-arrow-right ml-2 text-boutique-gold"></i>
+                </span>
+            </div>
+
+            <!-- T2 -->
+            <div onclick="elegirMotivo('Implantes y Prótesis')" class="cursor-pointer bg-white p-8 rounded-3xl border border-stone-200/80 bento-card flex flex-col justify-between">
+                <div>
+                    <div class="w-12 h-12 rounded-2xl bg-boutique-sand text-boutique-sage flex items-center justify-center text-xl mb-6">
+                        <i class="fa-solid fa-screwdriver-wrench"></i>
+                    </div>
+                    <h3 class="font-serif text-2xl font-bold text-boutique-ink mb-2">Implantes y Prótesis Dental</h3>
+                    <p class="text-stone-600 text-sm leading-relaxed mb-6">
+                        Recupera la funcionalidad y estética al masticar mediante implantes biocompatibles, coronas de zirconio y prótesis fijas o removibles a medida.
+                    </p>
+                </div>
+                <span class="text-xs font-bold uppercase tracking-wider text-boutique-sage flex items-center">
+                    Consultar valoración <i class="fa-solid fa-arrow-right ml-2 text-boutique-gold"></i>
+                </span>
+            </div>
+
+            <!-- T3 -->
+            <div onclick="elegirMotivo('Estética Dental / Blanqueamiento')" class="cursor-pointer bg-white p-8 rounded-3xl border border-stone-200/80 bento-card flex flex-col justify-between">
+                <div>
+                    <div class="w-12 h-12 rounded-2xl bg-boutique-sand text-boutique-sage flex items-center justify-center text-xl mb-6">
+                        <i class="fa-solid fa-wand-magic-sparkles"></i>
+                    </div>
+                    <h3 class="font-serif text-2xl font-bold text-boutique-ink mb-2">Estética Dental y Armonía</h3>
+                    <p class="text-stone-600 text-sm leading-relaxed mb-6">
+                        Blanqueamiento dental clínico seguro, carillas estéticas y rejuvenecimiento de la sonrisa respetando siempre la naturalidad de tu rostro.
+                    </p>
+                </div>
+                <span class="text-xs font-bold uppercase tracking-wider text-boutique-sage flex items-center">
+                    Mejorar mi sonrisa <i class="fa-solid fa-arrow-right ml-2 text-boutique-gold"></i>
+                </span>
+            </div>
+
+            <!-- T4 -->
+            <div onclick="elegirMotivo('Endodoncia / Dolor Dental')" class="cursor-pointer bg-white p-8 rounded-3xl border border-stone-200/80 bento-card flex flex-col justify-between">
+                <div>
+                    <div class="w-12 h-12 rounded-2xl bg-boutique-sand text-boutique-sage flex items-center justify-center text-xl mb-6">
+                        <i class="fa-solid fa-shield-halved"></i>
+                    </div>
+                    <h3 class="font-serif text-2xl font-bold text-boutique-ink mb-2">Endodoncia y Periodoncia</h3>
+                    <p class="text-stone-600 text-sm leading-relaxed mb-6">
+                        Tratamiento del nervio para salvar dientes con dolor agudo y cuidado integral de las encías (sangrado, gingivitis y piorrea).
+                    </p>
+                </div>
+                <span class="text-xs font-bold uppercase tracking-wider text-boutique-sage flex items-center">
+                    Consultar tratamiento <i class="fa-solid fa-arrow-right ml-2 text-boutique-gold"></i>
+                </span>
+            </div>
+
+            <!-- T5 -->
+            <div onclick="elegirMotivo('Ortodoncia Infantil o Adultos')" class="cursor-pointer bg-white p-8 rounded-3xl border border-stone-200/80 bento-card flex flex-col justify-between">
+                <div>
+                    <div class="w-12 h-12 rounded-2xl bg-boutique-sand text-boutique-sage flex items-center justify-center text-xl mb-6">
+                        <i class="fa-solid fa-face-smile"></i>
+                    </div>
+                    <h3 class="font-serif text-2xl font-bold text-boutique-ink mb-2">Ortodoncia y Odontopediatría</h3>
+                    <p class="text-stone-600 text-sm leading-relaxed mb-6">
+                        Corrección de la mordida y alineación dental en niños, adolescentes y adultos con un trato paciente, dulce y adaptado a los más pequeños.
+                    </p>
+                </div>
+                <span class="text-xs font-bold uppercase tracking-wider text-boutique-sage flex items-center">
+                    Pedir estudio <i class="fa-solid fa-arrow-right ml-2 text-boutique-gold"></i>
+                </span>
+            </div>
+
+            <!-- T6: Tarjeta Destacada de Urgencias -->
+            <div onclick="elegirMotivo('Urgencia Dental / Dolor')" class="cursor-pointer bg-boutique-sage text-white p-8 rounded-3xl shadow-lg bento-card flex flex-col justify-between">
+                <div>
+                    <div class="w-12 h-12 rounded-2xl bg-white/15 text-amber-300 flex items-center justify-center text-xl mb-6">
+                        <i class="fa-solid fa-kit-medical"></i>
+                    </div>
+                    <h3 class="font-serif text-2xl font-bold mb-2">¿Tienes una Urgencia o Dolor Dental?</h3>
+                    <p class="text-stone-200 text-sm leading-relaxed mb-6">
+                        Si sufres dolor agudo, inflamación, rotura de una pieza o caída de un empaste, escríbenos directamente para darte prioridad en el día.
+                    </p>
+                </div>
+                <span class="text-xs font-bold uppercase tracking-wider text-amber-300 flex items-center">
+                    Atención prioritaria por WhatsApp <i class="fa-solid fa-arrow-right ml-2"></i>
+                </span>
+            </div>
+        </div>
+    </section>
+
+    <!-- SELECTOR INTERACTIVO DE CITA EN 3 CLICS (Enfocado al WhatsApp 697 14 14 13) -->
+    <section id="cita-directa" class="py-20 px-4 sm:px-6 lg:px-8 bg-boutique-sand/70">
+        <div class="max-w-4xl mx-auto bg-white rounded-[2.5rem] shadow-xl border border-stone-200/80 p-8 sm:p-12">
+            <div class="text-center max-w-2xl mx-auto mb-10">
+                <span class="bg-emerald-50 text-emerald-700 border border-emerald-200 px-3.5 py-1 rounded-full text-xs font-bold uppercase tracking-wider">
+                    <i class="fa-brands fa-whatsapp mr-1"></i> Comunicación Directa y Sin Intermediarios
+                </span>
+                <h2 class="font-serif text-3xl sm:text-5xl font-bold text-boutique-ink mt-4 mb-3">
+                    Reserva tu cita en menos de 30 segundos
+                </h2>
+                <p class="text-stone-600 text-sm sm:text-base">
+                    Olvídate de formularios que nadie responde. Elige el motivo de tu visita y envíanos un WhatsApp directo a la consulta (<strong>697 14 14 13</strong>) para confirmar tu hueco.
+                </p>
+            </div>
+
+            <form onsubmit="enviarWhatsAppRosalia(event)" class="space-y-6">
+                <!-- Paso 1: Botones Interactivos de Motivo -->
+                <div>
+                    <label class="block text-xs font-bold uppercase tracking-wider text-stone-500 mb-3">
+                        1. ¿En qué podemos ayudarte? (Selecciona una opción)
+                    </label>
+                    <div class="grid grid-cols-2 sm:grid-cols-3 gap-2.5" id="contenedorChips">
+                        <button type="button" onclick="seleccionarChip(this, 'Revisión y Limpieza Dental')" class="chip-btn chip-active text-left px-4 py-3 rounded-xl border border-stone-300 text-xs sm:text-sm font-semibold text-stone-700 hover:border-boutique-sage transition">
+                            ✨ Revisión / Limpieza
+                        </button>
+                        <button type="button" onclick="seleccionarChip(this, 'Urgencia Dental / Dolor')" class="chip-btn text-left px-4 py-3 rounded-xl border border-stone-300 text-xs sm:text-sm font-semibold text-stone-700 hover:border-boutique-sage transition">
+                            🚨 Urgencia / Dolor
+                        </button>
+                        <button type="button" onclick="seleccionarChip(this, 'Implantes y Prótesis')" class="chip-btn text-left px-4 py-3 rounded-xl border border-stone-300 text-xs sm:text-sm font-semibold text-stone-700 hover:border-boutique-sage transition">
+                            🦷 Implantes / Prótesis
+                        </button>
+                        <button type="button" onclick="seleccionarChip(this, 'Estética Dental / Blanqueamiento')" class="chip-btn text-left px-4 py-3 rounded-xl border border-stone-300 text-xs sm:text-sm font-semibold text-stone-700 hover:border-boutique-sage transition">
+                            💎 Estética / Blanqueamiento
+                        </button>
+                        <button type="button" onclick="seleccionarChip(this, 'Ortodoncia Infantil o Adultos')" class="chip-btn text-left px-4 py-3 rounded-xl border border-stone-300 text-xs sm:text-sm font-semibold text-stone-700 hover:border-boutique-sage transition">
+                            😁 Ortodoncia / Niños
+                        </button>
+                        <button type="button" onclick="seleccionarChip(this, 'Consulta General / Presupuesto')" class="chip-btn text-left px-4 py-3 rounded-xl border border-stone-300 text-xs sm:text-sm font-semibold text-stone-700 hover:border-boutique-sage transition">
+                            📋 Otra consulta
+                        </button>
+                    </div>
+                    <input type="hidden" id="motivoSeleccionado" value="Revisión y Limpieza Dental">
+                </div>
+
+                <!-- Paso 2: Datos del Paciente -->
+                <div class="grid sm:grid-cols-2 gap-5 pt-2">
+                    <div>
+                        <label class="block text-xs font-bold uppercase tracking-wider text-stone-500 mb-2">
+                            2. Tu Nombre *
+                        </label>
+                        <input type="text" id="nombrePaciente" required placeholder="Ej. María Fernández" class="w-full bg-boutique-ivory border border-stone-300 rounded-xl px-4 py-3.5 text-sm focus:outline-none focus:border-boutique-sage">
+                    </div>
+                    <div>
+                        <label class="block text-xs font-bold uppercase tracking-wider text-stone-500 mb-2">
+                            3. ¿Qué horario te viene mejor? *
+                        </label>
+                        <select id="horarioPreferido" class="w-full bg-boutique-ivory border border-stone-300 rounded-xl px-4 py-3.5 text-sm font-medium focus:outline-none focus:border-boutique-sage">
+                            <option value="Por la mañana">Prefiero por la mañana</option>
+                            <option value="Por la tarde">Prefiero por la tarde (cerramos 20:30h)</option>
+                            <option value="Lo antes posible (primer hueco libre)">Lo antes posible (primer hueco)</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div>
+                    <label class="block text-xs font-bold uppercase tracking-wider text-stone-500 mb-2">
+                        Nota adicional (Opcional)
+                    </label>
+                    <input type="text" id="notaOpcional" placeholder="Ej. Es mi primera vez en la clínica, o qué días tengo libres..." class="w-full bg-boutique-ivory border border-stone-300 rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-boutique-sage">
+                </div>
+
+                <div class="pt-2">
+                    <button type="submit" class="w-full bg-boutique-sage hover:bg-boutique-sagedark text-white font-semibold py-4 px-8 rounded-full shadow-lg transition flex items-center justify-center space-x-3 text-base">
+                        <i class="fa-brands fa-whatsapp text-2xl text-emerald-300"></i>
+                        <span>Abrir WhatsApp y Enviar Solicitud de Cita</span>
+                    </button>
+                    <p class="text-center text-xs text-stone-400 mt-3">
+                        ¿Prefieres llamar por teléfono? Llámanos directamente al <a href="tel:925540433" class="text-boutique-sage font-bold underline">925 54 04 33</a>
+                    </p>
+                </div>
+            </form>
+        </div>
+    </section>
+
+    <!-- RESEÑAS Y CONFIANZA LOCAL EN ILLESCAS -->
+    <section id="opiniones" class="py-20 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
+        <div class="text-center max-w-2xl mx-auto mb-14">
+            <span class="text-boutique-gold font-bold text-xs uppercase tracking-[0.2em]">Pacientes de Illescas y La Sagra</span>
+            <h2 class="font-serif text-4xl font-bold text-boutique-ink mt-2">
+                La tranquilidad de estar en buenas manos
+            </h2>
+        </div>
+
+        <div class="grid md:grid-cols-3 gap-7">
+            <div class="bg-white p-8 rounded-3xl border border-stone-200/70 shadow-sm">
+                <div class="text-amber-400 text-xs mb-4">
+                    <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                </div>
+                <p class="text-stone-600 text-sm leading-relaxed italic mb-6">
+                    "Una gran profesional. La Dra. Rosalía te explica todo con muchísima paciencia y transmite una calma increíble si vas con miedo al dentista. Clínica de total confianza en la Calle Real."
+                </p>
+                <p class="text-xs font-bold uppercase tracking-wider text-boutique-sage">— Reseña en Google Maps</p>
+            </div>
+
+            <div class="bg-white p-8 rounded-3xl border border-stone-200/70 shadow-sm">
+                <div class="text-amber-400 text-xs mb-4">
+                    <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                </div>
+                <p class="text-stone-600 text-sm leading-relaxed italic mb-6">
+                    "Trato cercano e inmejorable. Se nota cuando vas a una clínica donde buscan lo mejor para tu boca y no venderte tratamientos por vender. Muy recomendables en Illescas."
+                </p>
+                <p class="text-xs font-bold uppercase tracking-wider text-boutique-sage">— Reseña en Google Maps</p>
+            </div>
+
+            <div class="bg-white p-8 rounded-3xl border border-stone-200/70 shadow-sm">
+                <div class="text-amber-400 text-xs mb-4">
+                    <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                </div>
+                <p class="text-stone-600 text-sm leading-relaxed italic mb-6">
+                    "Llevamos yendo toda la familia desde hace tiempo y siempre nos han atendido de maravilla, tanto en limpiezas como en urgencias. Muy puntuales y cuidadosas."
+                </p>
+                <p class="text-xs font-bold uppercase tracking-wider text-boutique-sage">— Reseña en Google Maps</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- UBICACIÓN EN CALLE REAL 49, ILLESCAS -->
+    <section id="ubicacion" class="py-16 px-4 sm:px-6 lg:px-8 bg-white border-t border-stone-200">
+        <div class="max-w-7xl mx-auto grid lg:grid-cols-12 gap-10 items-center">
+            <div class="lg:col-span-5 space-y-5">
+                <span class="text-boutique-sage font-bold text-xs uppercase tracking-[0.2em]">Visítanos en Illescas</span>
+                <h2 class="font-serif text-4xl font-bold text-boutique-ink">
+                    Dónde encontrarnos
+                </h2>
+                <p class="text-stone-600 text-sm leading-relaxed">
+                    Estamos ubicados en pleno eje principal de Illescas, en la <strong>Calle Real, 49</strong>. Fácil acceso a pie y zonas de aparcamiento cercanas.
+                </p>
+
+                <div class="space-y-4 pt-2 text-sm">
+                    <div class="flex items-start space-x-3.5">
+                        <div class="w-9 h-9 rounded-full bg-boutique-sand text-boutique-sage flex items-center justify-center shrink-0 mt-0.5">
+                            <i class="fa-solid fa-location-dot"></i>
+                        </div>
+                        <div>
+                            <strong class="block text-boutique-ink">Dirección de la Consulta</strong>
+                            <span class="text-stone-600">Calle Real, 49, 45200 Illescas, Toledo</span>
+                        </div>
+                    </div>
+
+                    <div class="flex items-start space-x-3.5">
+                        <div class="w-9 h-9 rounded-full bg-boutique-sand text-boutique-sage flex items-center justify-center shrink-0 mt-0.5">
+                            <i class="fa-solid fa-phone"></i>
+                        </div>
+                        <div>
+                            <strong class="block text-boutique-ink">Teléfono Fijo de Clínica</strong>
+                            <a href="tel:925540433" class="text-boutique-sage font-bold hover:underline">925 54 04 33</a>
+                        </div>
+                    </div>
+
+                    <div class="flex items-start space-x-3.5">
+                        <div class="w-9 h-9 rounded-full bg-emerald-50 text-emerald-700 flex items-center justify-center shrink-0 mt-0.5">
+                            <i class="fa-brands fa-whatsapp"></i>
+                        </div>
+                        <div>
+                            <strong class="block text-boutique-ink">WhatsApp de Citas y Consultas</strong>
+                            <a href="https://wa.me/34697141413" target="_blank" class="text-emerald-700 font-bold hover:underline">697 14 14 13</a>
+                        </div>
+                    </div>
+
+                    <div class="flex items-start space-x-3.5">
+                        <div class="w-9 h-9 rounded-full bg-boutique-sand text-boutique-sage flex items-center justify-center shrink-0 mt-0.5">
+                            <i class="fa-regular fa-clock"></i>
+                        </div>
+                        <div>
+                            <strong class="block text-boutique-ink">Horario de Atención</strong>
+                            <span class="text-stone-600">Lunes a Viernes — Abierto hasta las 20:30h</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Mapa de Calle Real 49, Illescas -->
+            <div class="lg:col-span-7 h-80 sm:h-96 rounded-3xl overflow-hidden shadow-md border border-stone-200">
+                <iframe 
+                    src="https://www.google.com/maps?q=Calle+Real+49+Illescas+Toledo&output=embed" 
+                    width="100%" 
+                    height="100%" 
+                    style="border:0;" 
+                    allowfullscreen="" 
+                    loading="lazy" 
+                    referrerpolicy="no-referrer-when-downgrade">
+                </iframe>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="bg-boutique-sage text-stone-300 py-10 px-4 text-xs sm:text-sm">
+        <div class="max-w-7xl mx-auto flex flex-col sm:flex-row justify-between items-center gap-4">
+            <div>
+                <span class="font-serif text-lg font-bold text-white">Dra. Rosalía Cikacz Navarro</span> — Calle Real, 49, Illescas (Toledo)
+            </div>
+            <div class="text-stone-400">
+                © 2026 Clínica Dental Dra. Rosalía Cikacz Navarro. Todos los derechos reservados.
+            </div>
+        </div>
+    </footer>
+
+    <!-- BOTÓN FLOTANTE DE WHATSAPP DIRECTO AL 697 14 14 13 -->
+    <a href="#cita-directa" aria-label="Reservar cita por WhatsApp" class="fixed bottom-6 right-6 z-50 bg-boutique-sage hover:bg-boutique-sagedark text-white px-5 py-3.5 rounded-full shadow-2xl border border-white/20 flex items-center space-x-2.5 transition transform hover:scale-105">
+        <i class="fa-brands fa-whatsapp text-2xl text-emerald-300"></i>
+        <span class="font-semibold text-sm">Cita por WhatsApp</span>
+    </a>
+
+    <!-- SCRIPTS DEL SELECTOR INTERACTIVO -->
+    <script>
+        function seleccionarChip(boton, motivo) {
+            document.querySelectorAll('.chip-btn').forEach(btn => btn.classList.remove('chip-active'));
+            boton.classList.add('chip-active');
+            document.getElementById('motivoSeleccionado').value = motivo;
+        }
+
+        function elegirMotivo(motivo) {
+            const botones = document.querySelectorAll('.chip-btn');
+            botones.forEach(btn => {
+                btn.classList.remove('chip-active');
+                if (btn.innerText.includes(motivo.split(' ')[0])) {
+                    btn.classList.add('chip-active');
+                }
+            });
+            document.getElementById('motivoSeleccionado').value = motivo;
+            document.getElementById('cita-directa').scrollIntoView({ behavior: 'smooth' });
+            setTimeout(() => {
+                document.getElementById('nombrePaciente').focus();
+            }, 600);
+        }
+
+        function enviarWhatsAppRosalia(e) {
+            e.preventDefault();
+            const nombre = document.getElementById('nombrePaciente').value;
+            const motivo = document.getElementById('motivoSeleccionado').value;
+            const horario = document.getElementById('horarioPreferido').value;
+            const nota = document.getElementById('notaOpcional').value;
+
+            let mensaje = `Hola Clínica Dental Dra. Rosalía Cikacz, me gustaría solicitar una cita:\n\n` +
+                          `👤 *Paciente:* ${nombre}\n` +
+                          `🦷 *Motivo:* ${motivo}\n` +
+                          `🕒 *Preferencia:* ${horario}`;
+
+            if (nota.trim() !== '') {
+                mensaje += `\n📝 *Nota:* ${nota}`;
+            }
+
+            const url = `https://wa.me/34697141413?text=${encodeURIComponent(mensaje)}`;
+            window.open(url, '_blank');
+        }
+    </script>
+</body>
+</html>
